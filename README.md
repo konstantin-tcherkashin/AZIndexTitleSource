@@ -1,7 +1,7 @@
 # AZIndexTitleSource
 A helper struct, converting plain array into structure, usable for UITableView with sectionIndex titles
 
-### Usage example
+### Usage:
 
 - Conform your model to AZRepresentable protocol
 
