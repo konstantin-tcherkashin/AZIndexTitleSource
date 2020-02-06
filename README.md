@@ -12,12 +12,12 @@ protocol AZRepresentable {
 ```
 - Create an instance of AZIndexTitleSource with your array of data
 ```swift
-var splittedSource: AZIndexTitleSource<SampleObject>! = AZIndexTitleSource(source: data)
+var splittedSource: AZIndexTitleSource<SampleObject> = AZIndexTitleSource(source: data)
 ```
 - Use it in UITableViewDataSource methods
 ```swift
 override func numberOfSections(in tableView: UITableView) -> Int {
-  return splittedSource?.sectionsCount ?? 0
+  return splittedSource.sectionsCount
 }
 
 override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
