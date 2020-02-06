@@ -30,14 +30,14 @@ override func tableView(_ tableView: UITableView, numberOfRowsInSection section:
 }
 
 override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    do {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! SampleTableViewCell
-        cell.update(try splittedSource.item(at: indexPath))
-        return cell
-    } catch {
-        print(error)
-        return UITableViewCell()
-    }
+  do {
+      let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! SampleTableViewCell
+      cell.update(try splittedSource.item(at: indexPath))
+      return cell
+  } catch {
+      print(error)
+      return UITableViewCell()
+  }
 }
 
 override func sectionIndexTitles(for tableView: UITableView) -> [String]? {
