@@ -40,7 +40,7 @@ override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexP
     }
 }
 
-overide func sectionIndexTitles(for tableView: UITableView) -> [String]? {
+override func sectionIndexTitles(for tableView: UITableView) -> [String]? {
     return splittedSource.keys
 }
 
