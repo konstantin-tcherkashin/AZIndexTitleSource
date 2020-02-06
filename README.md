@@ -4,18 +4,18 @@ A helper struct, converting plain array into structure, usable for UITableView w
 ### Usage:
 
 - Conform your model to AZRepresentable protocol
-
+```swift
         protocol AZRepresentable {
             var letter: String { get }
             var title: String { get }
         }
-
+```swift
 - Create an instance of AZIndexTitleSource with your array of data
-
+```swift
         var splittedSource: AZIndexTitleSource<SampleObject>! = AZIndexTitleSource(source: data)
-
+```swift
 - Use it in UITableViewDataSource methods
-
+```swift
         override func numberOfSections(in tableView: UITableView) -> Int {
             return splittedSource?.sectionsCount ?? 0
         }
@@ -51,6 +51,6 @@ A helper struct, converting plain array into structure, usable for UITableView w
         override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
             return  try? splittedSource.key(forSection: section)
         }
-
+```swift
 - That's it!
 
